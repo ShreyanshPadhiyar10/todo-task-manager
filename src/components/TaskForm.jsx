@@ -26,7 +26,7 @@ function TaskForm() {
 
     return (
         <div>
-            <div id='themeBtn' className='w-auto absolute right-0 mr-[6rem] top-0 mt-6 py-[.6rem] px-3 bg-slate-950 rounded-lg text-white font-bold cursor-pointer'>
+            <div id='themeBtn' className='w-auto absolute right-0 mr-[6rem] top-0 mt-6 py-[.6rem] px-4 bg-slate-950 rounded-lg text-white font-bold cursor-pointer'>
                 <button onClick={() => setShowModal(true)} className='flex'>
                     <h4>Add Task</h4>
                     <IoIosAdd size={'1.4em'} className='ml-2 bg-white text-black rounded-full' />
