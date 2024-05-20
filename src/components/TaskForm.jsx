@@ -35,8 +35,8 @@ function TaskForm() {
 
             {showModal && (
                 <div className="fixed top-0 left-0 z-50 w-full h-full flex items-center justify-center">
-                    <div className="absolute bg-gray-800 opacity-50 w-full h-full"></div>
-                    <div className="z-50 w-2/6 bg-white p-8 rounded shadow-lg dark:bg-slate-950 dark:text-white">
+                    <div className="absolute bg-gray-800 opacity-75 w-full h-full"></div>
+                    <div className="z-50 sm:w-1/2 md:w-2/5 lg:w-2/6 bg-white p-8 rounded shadow-lg dark:bg-slate-950 dark:text-white">
                         <h1 className="text-2xl font-bold mb-4">Task</h1>
                         <input
                             type="text"
