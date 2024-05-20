@@ -8,7 +8,7 @@
     <div class="container">
         <h1>Task Manager</h1>
         <h2>Overview</h2>
-        <p>Task Manager is a versatile and user-friendly application designed to help you manage your tasks efficiently. Whether you are organizing personal to-dos, planning project tasks, also move your tasks as priority wise with dragging them, Task Manager provides the tools you need to stay on top of your work.</p>
+        <p>Task Manager is a versatile and user-friendly application designed to help you manage your tasks efficiently. Whether you are organizing personal to-dos, planning project tasks, also move your tasks as priority wise with dragging them, Task Manager provides the tools you need to stay on top of your work. Here is the live <a href="https://shreyanshpadhiyar10.github.io/todo-task-manager/">preview</a> of project.</p>
         <h2>Features</h2>
         <ul>
             <li><strong>Task Creation and Management</strong>: Easily create, edit, and delete tasks.</li>
