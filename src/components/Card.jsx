@@ -36,11 +36,12 @@ function Card({ task }) {
     return (
         <>
             <div className=''>
-                { task.checked ? <GiCheckMark className='absolute right-[-25px] top-[-20px]' size={70} /> : "" }
+                {task.checked ? <GiCheckMark className='absolute right-[-25px] top-[-20px]' size={70} /> : ""}
                 {editClicked ?
                     <input type="text" className='text-white w-auto p-[1px] pl-2 bg-transparent border m-2 border-white rounded-md'
                         value={newTitle}
-                        onChange={(e) => setNewTitle(e.target.value)} /> :
+                        onChange={(e) => setNewTitle(e.target.value)} />
+                    :
                     <h1 className='text-xl font-bold text-center py-2'>{task.title}</h1>
                 }
 
@@ -51,7 +52,8 @@ function Card({ task }) {
                         rows={4}
                         value={newTask}
                         onChange={(e) => setNewTask(e.target.value)} >
-                    </textarea> :
+                    </textarea>
+                    :
                     <div className='mx-5 mt-3'>
                         <h1>{task.task}</h1>
                     </div>
@@ -62,7 +64,8 @@ function Card({ task }) {
                         <button disabled={task.checked ? true : ""}
                             className={`${task.checked ? 'cursor-not-allowed' : ''}`} >
                             {editClicked ?
-                                <FaRegSave size={22} className='ml-5' onClick={saveUpdatedTask} /> :
+                                <FaRegSave size={22} className='ml-5' onClick={saveUpdatedTask} />
+                                :
                                 <FaRegEdit size={22} className='text-green-600 ml-5' onClick={editTask} />}
                         </button>
                         <button className='ml-2'>
@@ -75,8 +78,6 @@ function Card({ task }) {
                     </div>
                 </div>
             </div>
-
-
         </>
     )
 }

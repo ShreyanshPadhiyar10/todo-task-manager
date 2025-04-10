@@ -42,7 +42,6 @@ function App() {
     setTasks((prev) => prev.map((prevTask) => prevTask.id === id ? { ...prevTask, checked: !prevTask.checked } : prevTask))
   }
 
-
   useEffect(() => {
     const tasks = JSON.parse(localStorage.getItem("Tasks"))
 
@@ -55,22 +54,21 @@ function App() {
     localStorage.setItem("Tasks", JSON.stringify(tasks))
   }, [tasks])
 
-  const reference = useRef(null)
-  const newRef = useRef(null)
-
   return (
     <ThemeProvider value={{ themeMode, darkTheme, lightTheme }}>
       <TaskDataProvider value={{ tasks, addTask, deleteTask, updateTask, toggleChecked }}>
         <div className='h-full w-100'>
           <ThemeBtn />
           <div className='h-auto'>
-            <div ref={newRef} className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 auto-rows-auto pt-20 sm:pl-10 pl-0 min-h-screen overflow-hidden text-slate-950 dark:bg-slate-900'>
+            <div className='flex flex-wrap justify-center pt-20 sm:pl-10 pl-0 min-h-screen overflow-hidden text-slate-950 dark:bg-slate-900'>
               {
                 tasks && tasks.length > 0 ?
                   tasks.map((task) => (
-                    <motion.div drag dragConstraints={newRef} whileDrag={{ scale: 1.1 }} key={task.id} className={`h-72 relative m-3 rounded-lg ${task.checked ? 'bg-[#2ab12a] text-black' : 'bg-gray-950 text-white'}`}>
+                    <div key={task.id} className={`h-72 w-56 relative m-3 rounded-lg ${task.checked
+                      ? 'bg-[#2ab12a] text-black'
+                      : 'bg-gray-950 text-white'}`}>
                       <Card task={task} />
-                    </motion.div>
+                    </div>
                   )) :
                   <div className='w-screen flex justify-center items-center mb-16'>
                     <h1 className='text-zinc-700 font-bold text-7xl mb-16'>No Task Added</h1>
